@@ -1,0 +1,83 @@
+.poster {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100vw;
+    height: 100vh;
+    background: url("../img/bg/main.jpg") no-repeat 100% 100%;
+    background-size: cover;
+    z-index: 90;
+
+    &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        z-index: -1;
+        display: block;
+        width: 100vw;
+        height: 100vh;
+        background-color: #656363;
+        filter: blur(1px);
+        opacity: 0.5;
+    }
+}
+
+.poster__contactList {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+
+    li {
+        width: 56px;
+        height: 56px;
+    }
+}
+
+.poster__wrapper {
+    width: 100vw;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.poster__heading {
+    width: 100%;
+    font-size: 96px;
+    line-height: 120px;
+    color: #ffffff;
+    text-align: center;
+}
+
+.poster__name {
+    width: 100%;
+    font-size: 36px;
+    color: #ffffff;
+    text-align: center;
+}
+
+@media (min-width: 720px) and (max-width: 1200px) {
+    .poster__heading {
+        font-size: 76px;
+        line-height: 90px;
+    }
+
+    .poster__name {
+        font-size: 30px;
+        line-height: 36px;
+    }
+}
+
+
+@media (min-width: 320px) and (max-width: 720px) {
+    .poster__heading {
+        font-size: 33px;
+        line-height: 120%;
+    }
+
+    .poster__name {
+        font-size: 24px;
+        line-height: 120%;
+    }
+}

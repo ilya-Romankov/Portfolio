@@ -1,0 +1,113 @@
+.project {
+    position: absolute;
+    left: -100%;
+    top: 0;
+    z-index: 90;
+    width: 100vw;
+    height: 100vh;
+    transition-delay: .1s;
+    transition: all 1s ease;
+    @include containerPadding;
+    background-color:#EEF1F5;
+    overflow: hidden;
+}
+
+.project.show {
+    left: 0;
+}
+
+.project__wrapper {
+    width: 100%;
+    height: 100%;
+}
+
+.project__contentWrapper {
+    width: 100%;
+    height: 100%;
+}
+
+.project__list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.project__item {
+    width: 263px;
+    height: 263px;
+    border-radius: 20px;
+    transition: 0.5s;
+
+
+    a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+    }
+
+    &:hover {
+        transform: scale(1.1);
+    }
+}
+
+.project__item--wella {
+    background: linear-gradient(to right, #4DB935, #77DD66);
+    
+    img {
+        width: 99px;
+        height: 60px;
+    }
+}
+
+.project__item--oboi {
+    background-color: #C9303F;
+
+    img {
+        width: 196px;
+        height: 34px;
+    }
+}
+
+.project__item--unipromo {
+    background: linear-gradient(107.56deg, #4769FF 0%, #3060EF 50%, #0521B0 100%);
+
+    img {
+        width: 125px;
+        height: 34px;
+    }
+}
+
+.project__item--soktour {
+    background-color: #ffffff;
+}
+
+@media (min-width: 720px) and (max-width: 1200px) {
+    .project__list {
+        flex-wrap: wrap;
+        align-content: flex-start;
+    }
+
+    .project__item {
+        width: calc((100% / 2) - 35px);;
+        height: calc((100% / 4) - 35px);
+        margin-top: 40px;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 720px) {
+    .project__list {
+        margin-top: 10px;
+        flex-wrap: wrap;
+        align-content: flex-start;
+    }
+
+    .project__item {
+        margin-bottom: 10px;
+        width: 100%;
+        height: calc(100% / 6);
+    }
+}

@@ -1,0 +1,111 @@
+.header {
+    position: absolute;
+    padding-top:  20px;
+    padding-bottom: 20px;
+    width: 100%;
+    z-index: 99;
+
+    transition: all 1s ease;
+}
+
+.header--show {
+    background-color: #000000;
+}
+
+.header__logo a {
+    font-family: 'Press Start 2P', cursive;
+    word-spacing: -5px;
+    color: #ffffff;
+}
+
+.header__wrapper {
+    position: relative;
+    display: flex;
+    z-index: 95;
+}
+
+.header__nav {
+    display: flex;
+    margin-left: auto;
+}
+
+.header__list {
+    display: flex;
+    gap: 30px;
+}
+
+.header__item a {
+    font-size: 20px;
+    color: #ffffff;
+}
+
+.header__close {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 80px;
+}
+
+
+.header--show .header__close {
+    display: block;
+}
+
+
+
+@media (min-width: 720px) and (max-width: 1200px) {
+    .header__item a {
+        font-size: 16px;
+    }
+
+    .header__logo a {
+        font-size: 16px;
+    }
+
+    .header__close  {
+        right: 20px;
+ 
+    }
+}
+
+@media (min-width: 320px) and (max-width: 720px) {
+
+    .header {
+        padding-top: 10px;
+    }
+
+    .header__logo {
+        width: 100%;
+        text-align: center;
+    }
+
+    .header__logo a {
+        font-size: 12px;
+        line-height: 100%;
+    }
+
+    .header__nav {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin-left: 0;
+    }
+
+    .header__item a {
+        font-size: 16px;
+        line-height: 18px;
+    }
+
+    .header__list {
+        gap: 15px;
+    }
+
+    .header__wrapper {
+        flex-wrap: wrap;
+    }
+
+    .header__close  {
+        right: 20px;
+        top: 90px;
+    }
+}

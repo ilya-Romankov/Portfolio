@@ -1,0 +1,14 @@
+@mixin reset {
+    margin: 0;
+    padding: 0;
+}
+
+@mixin reset-list {
+    @include reset;
+    list-style-type: none;
+}
+
+@mixin containerPadding {
+    padding-top: 90px;
+}
+
